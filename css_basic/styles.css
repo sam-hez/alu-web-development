@@ -7,13 +7,49 @@ main{
     display: flex;
     flex-direction: row;
     flex: auto;
+    border: 2px solid #000000;
 }
 
 article{
     flex: 2;
     overflow: auto;
+    border-right: 1px solid #000000;
 }
 aside{
     flex: 1;
     overflow-y: auto;
+}
+
+header{
+    background-color: #bdbdbd;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+footer{ 
+    background-color: #000000;
+    color: white;
+    padding: 40px;
+}
+footer a{
+    color: white;
+}
+
+.nav-item{
+    background-color: #000000;
+    color: white;
+    padding: 5px;
+    text-transform: uppercase;
+
+}
+
+ .active{
+    background-color: #636363;
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid #000000;
+
+}
+
+.logo img{
+    margin-bottom: 20px!important;
 }
