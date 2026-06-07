@@ -124,3 +124,42 @@ section:first-of-type > div:nth-child(2) > div > div p{
 	section:first-of-type > div:nth-child(2) > div > div{width:45%;margin:18px}
 }
 
+/* Quote section (second section) */
+section:nth-of-type(2){
+	background:#d78af3;
+	padding:48px 20px;
+}
+section:nth-of-type(2) > div{
+	max-width:1100px;
+	margin:0 auto;
+	display:flex;
+	align-items:center;
+	gap:28px;
+}
+section:nth-of-type(2) img{
+	width:96px;height:96px;border-radius:50%;object-fit:cover;flex:0 0 96px;border:6px solid rgba(255,255,255,0.14);
+}
+section:nth-of-type(2) blockquote{
+	color:#fff;
+	font-size:18px;
+	line-height:1.7;
+	margin-bottom:14px;
+}
+section:nth-of-type(2) > div > div p{
+	margin:0;
+	color:#fff;
+}
+section:nth-of-type(2) > div > div p:first-of-type{
+	font-weight:700;
+	margin-top:8px;
+}
+section:nth-of-type(2) > div > div p:last-of-type{
+	font-style:italic;
+	color:rgba(255,255,255,0.95);
+}
+
+@media (max-width:700px){
+	section:nth-of-type(2) > div{flex-direction:column;align-items:flex-start}
+	section:nth-of-type(2) img{margin-bottom:14px}
+}
+
