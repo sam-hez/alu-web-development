@@ -163,3 +163,165 @@ section:nth-of-type(2) > div > div p:last-of-type{
 	section:nth-of-type(2) img{margin-bottom:14px}
 }
 
+/* Videos list (third section) */
+section:nth-of-type(3){
+	background:#ffffff;
+	padding:70px 20px;
+}
+section:nth-of-type(3) h1{
+	text-align:center;
+	color:#222;
+	font-size:20px;
+	margin-bottom:36px;
+}
+section:nth-of-type(3) h1 span{color:#b86af7}
+
+section:nth-of-type(3) > div{
+	max-width:1100px;
+	margin:0 auto;
+	display:flex;
+	gap:28px;
+	justify-content:space-between;
+	align-items:flex-start;
+	flex-wrap:wrap;
+}
+
+/* Video card */
+section:nth-of-type(3) > div > div{
+	width:230px;
+	border-radius:8px;
+	overflow:visible;
+	text-align:left;
+}
+
+/* Thumbnail */
+section:nth-of-type(3) > div > div img{
+	width:100%;
+	height:140px;
+	object-fit:cover;
+	border-radius:8px;
+	display:block;
+}
+
+/* Play icon centered on thumbnail (using the card as reference) */
+section:nth-of-type(3) > div > div{position:relative}
+section:nth-of-type(3) > div > div::after{
+	content:'▶';
+	font-size:24px;
+	color:#b86af7;
+	background:rgba(255,255,255,0.95);
+	width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+	position:absolute;left:50%;transform:translateX(-50%);top:52px;box-shadow:0 6px 18px rgba(29,12,46,0.12);
+}
+
+/* Title and description */
+section:nth-of-type(3) > div > div h2{
+	font-size:15px;
+	color:#222;
+	margin:12px 0 8px;
+	font-weight:700;
+}
+section:nth-of-type(3) > div > div p{
+	font-size:13px;color:#7b7b7b;margin:0 0 12px;
+}
+
+/* Author + rating row */
+section:nth-of-type(3) > div > div > div{
+	display:flex;align-items:center;gap:10px;margin-top:8px;
+}
+section:nth-of-type(3) > div > div > div img{width:28px;height:28px;border-radius:50%;object-fit:cover}
+section:nth-of-type(3) > div > div > div h3{color:#b86af7;font-size:13px;margin:0;font-weight:700}
+
+/* Stars and duration */
+section:nth-of-type(3) > div > div > div + div{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+section:nth-of-type(3) > div > div > div + div > div{display:flex;gap:6px;align-items:center}
+section:nth-of-type(3) > div > div > div + div > div img{width:12px;height:12px}
+section:nth-of-type(3) > div > div > div + div p{color:#b86af7;margin:0;font-weight:700}
+
+@media (max-width:900px){
+	section:nth-of-type(3) > div > div{width:48%;margin-bottom:24px}
+}
+@media (max-width:600px){
+	section:nth-of-type(3) > div > div{width:100%}
+	section:nth-of-type(3) > div{gap:20px}
+}
+
+/* Videos / Popular tutorials section */
+section:nth-of-type(3){
+	background:#ffffff;
+	padding:64px 20px;
+	color:#222;
+}
+section:nth-of-type(3) h1{
+	text-align:center;
+	font-size:20px;
+	margin:0 auto 36px;
+	color:#222;
+}
+/* optional markup: <span class="accent">popular</span> */
+section:nth-of-type(3) h1 .accent{color:#b86af7;font-weight:800}
+
+/* container */
+section:nth-of-type(3) > div{max-width:1100px;margin:0 auto}
+
+/* cards row */
+section:nth-of-type(3) > div > div{
+	display:flex;
+	gap:26px;
+	justify-content:space-between;
+	align-items:flex-start;
+	flex-wrap:wrap;
+}
+
+/* single card */
+section:nth-of-type(3) > div > div > div{
+	background:#fff;
+	border-radius:6px;
+	flex:1 1 22%;
+	box-shadow:0 6px 18px rgba(16,24,40,0.06);
+	overflow:hidden;
+	padding:12px;
+	position:relative;
+}
+
+/* thumbnail */
+section:nth-of-type(3) > div > div > div > img:first-of-type{
+	width:100%;
+	height:140px;
+	object-fit:cover;
+	border-radius:6px;
+	display:block;
+}
+
+/* play button overlay (circle + triangle) */
+section:nth-of-type(3) > div > div > div::after{
+	content:'';
+	width:56px;height:56px;border-radius:50%;
+	background:rgba(255,255,255,0.95);
+	position:absolute;left:50%;top:86px;transform:translateX(-50%);
+	box-shadow:0 8px 20px rgba(88,64,255,0.12);
+}
+section:nth-of-type(3) > div > div > div::before{
+	content:'';
+	width:0;height:0;border-left:12px solid #b86af7;border-top:8px solid transparent;border-bottom:8px solid transparent;
+	position:absolute;left:50%;top:92px;transform:translate(-40%,-50%);
+}
+
+/* video title and description */
+section:nth-of-type(3) h2{font-size:15px;margin:12px 6px 8px;color:#222;font-weight:700}
+section:nth-of-type(3) p{font-size:13px;color:#6b6f76;margin:0 6px 12px}
+
+/* author block: image + name */
+section:nth-of-type(3) > div > div > div > div:first-of-type{display:flex;align-items:center;gap:10px;margin:6px}
+section:nth-of-type(3) > div > div > div > div:first-of-type img{width:26px;height:26px;border-radius:50%;object-fit:cover}
+section:nth-of-type(3) > div > div > div > div:first-of-type h3{color:#b86af7;font-size:13px;margin:0;font-weight:700}
+
+/* rating and duration */
+section:nth-of-type(3) > div > div > div > div:last-of-type{display:flex;align-items:center;justify-content:space-between;margin:8px 6px 0}
+section:nth-of-type(3) > div > div > div > div:last-of-type > div{display:flex;gap:6px;align-items:center}
+section:nth-of-type(3) > div > div > div > div:last-of-type p{color:#b86af7;font-weight:700;margin:0}
+
+@media (max-width:900px){
+	section:nth-of-type(3) > div > div > div{flex:1 1 45%;margin-bottom:18px}
+}
+
