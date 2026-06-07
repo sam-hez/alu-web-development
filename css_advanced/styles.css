@@ -246,49 +246,71 @@ section:nth-of-type(3) > div > div > div + div p{color:#b86af7;margin:0;font-wei
 	section:nth-of-type(3) > div{gap:20px}
 }
 
-/* Membership section (try to target both possible markup positions) */
-section:nth-of-type(5), section:nth-of-type(6){
+/* Membership section */
+section:nth-of-type(4){
 	background:#091826;
 	color:#fff;
 	padding:64px 20px 80px;
 }
 
-section:nth-of-type(5) h1, section:nth-of-type(6) h1{
+section:nth-of-type(4) h1{
 	text-align:center;
 	font-size:20px;
 	margin-bottom:40px;
 }
-section:nth-of-type(5) h1 span, section:nth-of-type(6) h1 span{color:#b86af7;font-weight:800}
+section:nth-of-type(4) h1 span{color:#b86af7;font-weight:800}
 
 /* membership items container */
-section:nth-of-type(5) > div, section:nth-of-type(6) > div{
+section:nth-of-type(4) > div{
 	max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap
 }
 
 /* single membership item */
-section:nth-of-type(5) > div > div, section:nth-of-type(6) > div > div{
+section:nth-of-type(4) > div > div{
 	flex:1 1 22%;text-align:center;padding:18px 12px
 }
 
 /* icon on top (could be img or pseudo) */
-section:nth-of-type(5) > div > div img, section:nth-of-type(6) > div > div img{
+section:nth-of-type(4) > div > div img{
 	width:46px;height:46px;display:block;margin:0 auto 14px;filter:grayscale(1) brightness(2);
 }
-section:nth-of-type(5) > div > div h2, section:nth-of-type(6) > div > div h2{
+section:nth-of-type(4) > div > div h2{
 	color:#fff;font-size:15px;margin-bottom:10px;font-weight:700
 }
-section:nth-of-type(5) > div > div p, section:nth-of-type(6) > div > div p{
+section:nth-of-type(4) > div > div p{
 	color:rgba(255,255,255,0.75);font-size:13px;line-height:1.6;margin:0 auto;max-width:220px
 }
 
 /* CTA button centered below */
-section:nth-of-type(5) button, section:nth-of-type(6) button{
+section:nth-of-type(4) button{
 	display:block;margin:38px auto 0;background:#b86af7;color:#fff;border:none;padding:12px 28px;border-radius:28px;font-weight:800;box-shadow:0 10px 24px rgba(96,40,255,0.16);cursor:pointer
 }
 
 @media (max-width:900px){
-	section:nth-of-type(5) > div, section:nth-of-type(6) > div{justify-content:center}
-	section:nth-of-type(5) > div > div, section:nth-of-type(6) > div > div{flex:1 1 45%;margin-bottom:20px}
+	section:nth-of-type(4) > div{justify-content:center}
+	section:nth-of-type(4) > div > div{flex:1 1 45%;margin-bottom:20px}
+}
+
+/* FAQ section (after membership) */
+section:nth-of-type(5){
+	background:#ffffff;
+	color:#111;
+	padding:86px 20px;
+}
+section:nth-of-type(5) h1{
+	text-align:center;
+	font-size:36px;
+	margin-bottom:40px;
+	color:#111;
+	font-weight:300;
+}
+section:nth-of-type(5) > div{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+section:nth-of-type(5) > div > div{padding:0 10px}
+section:nth-of-type(5) h2{font-size:13px;color:#111;font-weight:700;margin-bottom:10px}
+section:nth-of-type(5) p{font-size:13px;color:#7b7b7b;line-height:1.7}
+
+@media (max-width:900px){
+	section:nth-of-type(5) > div{grid-template-columns:1fr}
 }
 
 /* Videos / Popular tutorials section */
