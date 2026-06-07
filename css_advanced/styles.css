@@ -1,0 +1,126 @@
+/* Basic reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	color:#fff;
+	line-height:1.4;
+}
+
+/* Hero background: image + dark overlay */
+section:first-of-type{
+	min-height:760px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	padding:140px 20px 80px;
+	background-image: linear-gradient(rgba(8,12,22,0.6), rgba(8,12,22,0.6)), url('https://s3.amazonaws.com/alu-intranet.hbtn.io/uploads/medias/2021/4/d334bcd363741f2c5e5f32cd6114f4bd85910290.jpg');
+	background-size:cover;
+	background-position:center;
+}
+
+/* Header container (centered and not full width) */
+header{
+	position:fixed;
+	left:0;right:0;top:0;
+	z-index:20;
+	padding:18px 0;
+}
+header > div{
+	max-width:1100px;
+	margin:0 auto;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	padding:0 18px;
+}
+
+/* Place logo on the top right */
+header > div > a:first-child{order:2}
+header > div > div{order:1}
+header img{height:30px;display:block}
+
+/* Navigation links (right aligned block) */
+header div > div{
+	display:flex;
+	gap:30px;
+	align-items:center;
+}
+header div > div a{
+	color:#fff;
+	text-decoration:none;
+	font-weight:600;
+	letter-spacing:0.03em;
+}
+
+/* Hero heading + paragraph + button */
+section:first-of-type > div:first-child h1{
+	font-size:110px;
+	line-height:0.9;
+	margin-bottom:18px;
+	font-weight:800;
+	color:#ffffff;
+}
+section:first-of-type > div:first-child p{
+	color:rgba(255,255,255,0.9);
+	font-size:18px;
+	margin-bottom:28px;
+}
+
+/* Primary call-to-action button */
+section:first-of-type button{
+	background:#b86af7;
+	color:#fff;
+	border:none;
+	padding:12px 26px;
+	border-radius:28px;
+	box-shadow:0 12px 30px rgba(96,40,255,0.28);
+	font-weight:700;
+	cursor:pointer;
+}
+
+/* Secondary H2 (Learn from the pros) */
+section:first-of-type > div:nth-child(2) h2{
+	color:#b86af7;
+	font-size:22px;
+	margin:60px 0 18px;
+	text-align:center;
+}
+
+/* People block: centered and constrained */
+section:first-of-type > div:nth-child(2) > div{
+	max-width:1000px;
+	margin:0 auto;
+	display:flex;
+	justify-content:space-between;
+	gap:28px;
+	align-items:flex-start;
+}
+
+section:first-of-type > div:nth-child(2) > div > div{
+	text-align:center;
+}
+section:first-of-type img{
+	max-width:100%;
+}
+
+/* Individual person styling */
+section:first-of-type > div:nth-child(2) > div > div img{
+	width:120px;height:120px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 12px;border:6px solid rgba(255,255,255,0.06);
+}
+section:first-of-type > div:nth-child(2) > div > div h3{
+	font-size:15px;font-weight:800;margin-bottom:6px;color:#fff;
+}
+section:first-of-type > div:nth-child(2) > div > div p{
+	font-size:13px;color:rgba(255,255,255,0.8);font-style:italic;margin:0
+}
+
+/* Small responsive adjustments */
+@media (max-width:900px){
+	section:first-of-type > div:first-child h1{font-size:64px}
+	section:first-of-type > div:nth-child(2) > div{flex-wrap:wrap;justify-content:center}
+	section:first-of-type > div:nth-child(2) > div > div{width:45%;margin:18px}
+}
+
